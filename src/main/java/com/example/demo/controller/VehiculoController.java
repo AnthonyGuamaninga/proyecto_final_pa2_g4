@@ -35,9 +35,6 @@ public class VehiculoController {
 		return "vistaVehiculosDisponiblesMarcaModelo";
 	}
 	
-	@GetMapping("/reservarVehiculo")
-	public String reservarVehiculo() {
-		return "";
-	}
+	
 
 }

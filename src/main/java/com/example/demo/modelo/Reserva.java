@@ -30,8 +30,10 @@ public class Reserva {
 	private BigDecimal iva;
 	@Column(name="rese_valor_total")
 	private BigDecimal valorTotal;
-	@Column(name="rese_fecha")
-	private LocalDateTime fecha;
+	@Column(name="rese_fecha_inicio")
+	private LocalDateTime fechaInicio;
+	@Column(name="rese_fecha_fin")
+	private LocalDateTime fechaFin;
 	
 	@ManyToOne
 	@JoinColumn(name = "rese_cedula_cliente")
@@ -104,13 +106,23 @@ public class Reserva {
 		this.vehiculo = vehiculo;
 	}
 
-	public LocalDateTime getFecha() {
-		return fecha;
+	public LocalDateTime getFechaInicio() {
+		return fechaInicio;
 	}
 
-	public void setFecha(LocalDateTime fecha) {
-		this.fecha = fecha;
+	public void setFechaInicio(LocalDateTime fechaInicio) {
+		this.fechaInicio = fechaInicio;
 	}
+
+	public LocalDateTime getFechaFin() {
+		return fechaFin;
+	}
+
+	public void setFechaFin(LocalDateTime fechaFin) {
+		this.fechaFin = fechaFin;
+	}
+
+	
 	
 	
 	

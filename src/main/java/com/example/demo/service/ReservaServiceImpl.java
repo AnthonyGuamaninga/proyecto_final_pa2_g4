@@ -31,7 +31,8 @@ public class ReservaServiceImpl implements IReservaService {
 		Cliente cliente= this.clienteRepo.buscar(cedula);
 		Vehiculo vehiculo = this.iVehiculoRepo.buscar(placa);
 		
-		reserva.setFecha(LocalDateTime.now());
+		reserva.setFechaInicio(fechaInicio);
+		reserva.setFechaFin(fechaFin);
 		if(!vehiculo.getEstado().equals("ND")) {
 			//cambio de estado del vehiculo (NO DISPONIBLE)
 			vehiculo.setEstado("ND");
